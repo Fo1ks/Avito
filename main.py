@@ -5,6 +5,9 @@ import statistics
 from urllib.parse import unquote
 import requests
 from selectolax.parser import HTMLParser
+from statistics import mean
+import statistics
+
 statistics
 
 
@@ -44,8 +47,14 @@ def main():
      data = get_json(url)
      offers = get_offers(data)
      for offer in offers:
-        
-         print(offer)
+        s = offer
+
+        c = (s.split('₽ за м²')[0])
+        b = c.split()
+        b = ''.join(b)
+        print(b)
+
+
 
 
 
